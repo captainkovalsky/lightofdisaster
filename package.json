@@ -8,8 +8,7 @@
     "gulp-uglify": "*",
     "gulp-sass": "*",
     "gulp-jade": "*",
-    "gulp-livereload": "*",
-    "tiny-lr": "*",
+    "gulp-notify": "*",
     "express": "*",
     "marked": "*",
     "gulp-compass": "*",
@@ -22,6 +21,7 @@
     "coffee-script": "*"
   },
   "devDependencies": {
-    "browserify": "*"
+    "browserify": "*",
+    "gulp-livereload": "*"
   }
 }
