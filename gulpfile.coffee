@@ -57,14 +57,10 @@ gulp.task 'watch', =>
   $.notify {message: "Reload"}
 
 
-gulp.task 'default', ['demon']
-gulp.task 'run-dev', ['images', 'express', 'watch']
+gulp.task 'default', ['images', 'watch', 'express', 'demon']
 gulp.task 'demon', =>
   nodemon {
     script: 'dist/scripts/app.js'
-    ext: 'js'
     env: {'NODE_ENV': 'development'}
     nodeArgs: ['--debug=9999']
   }
-  .on 'start', ['run-dev']
-  .on 'change', ['watch']
