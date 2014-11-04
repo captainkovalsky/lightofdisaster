@@ -1,6 +1,7 @@
 gulp = require 'gulp'
 $ = (require 'gulp-load-plugins')()
 livereload = require 'gulp-livereload'
+nodemon = require 'gulp-nodemon'
 express = require 'express'
 path = require 'path'
 app = express()
@@ -33,7 +34,6 @@ gulp.task 'coffee', =>
 gulp.task 'images', =>
   gulp.src './src/images/'
   .pipe gulp.dest './dist/images'
-  .pipe
 
 gulp.task 'templates', =>
   gulp.src 'src/*.jade'
@@ -57,5 +57,14 @@ gulp.task 'watch', =>
   $.notify {message: "Reload"}
 
 
-gulp.task 'default', ['coffee', 'compass', 'templates', 'images', 'express', 'watch']
-
+gulp.task 'default', ['demon']
+gulp.task 'run-dev', ['images', 'express', 'watch']
+gulp.task 'demon', =>
+  nodemon {
+    script: 'dist/scripts/app.js'
+    ext: 'js'
+    env: {'NODE_ENV': 'development'}
+    nodeArgs: ['--debug=9999']
+  }
+  .on 'start', ['run-dev']
+  .on 'change', ['watch']
