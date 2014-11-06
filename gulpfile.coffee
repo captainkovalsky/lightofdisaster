@@ -32,8 +32,9 @@ gulp.task 'coffee', =>
 
 
 gulp.task 'images', =>
-  gulp.src './src/images/'
-  .pipe gulp.dest './dist/images'
+  gulp.src './src/images/**/*'
+  .pipe gulp.dest './dist/images/'
+  .pipe livereload()
 
 gulp.task 'templates', =>
   gulp.src 'src/*.jade'
@@ -54,6 +55,7 @@ gulp.task 'watch', =>
   gulp.watch 'src/stylesheets/*.sass', ['compass']
   gulp.watch 'src/scripts/*.coffee', ['coffee']
   gulp.watch 'src/*.jade', ['templates']
+  gulp.watch './src/images/**/*', ['images']
   $.notify {message: "Reload"}
 
 
