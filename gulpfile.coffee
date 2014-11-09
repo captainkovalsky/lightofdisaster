@@ -2,20 +2,22 @@ gulp = require 'gulp'
 $ = (require 'gulp-load-plugins')()
 livereload = require 'gulp-livereload'
 nodemon = require 'gulp-nodemon'
+concat = require 'gulp-concat'
 express = require 'express'
 path = require 'path'
+sass = require 'gulp-ruby-sass'
 app = express()
 
-gulp.task 'compass', =>
-  gulp.src './src/stylesheets/*.sass'
+gulp.task 'bootstrap-sass', =>
+  gulp.src ['./src/stylesheets/*.sass']
   .pipe $.plumber()
-  .pipe $.compass {
-    css: 'dist/stylesheets'
-    sass: 'src/stylesheets'
-  }
+  .pipe sass({
+    'sourcemap=none': true
+    compass: true
+    loadPath: './bower_components/bootstrap-sass-official/assets/stylesheets'
+  })
   .pipe gulp.dest 'dist/stylesheets'
   .pipe livereload()
-
 
 gulp.task 'coffee', =>
   gulp.src 'src/scripts/main.coffee', {read: false}
@@ -52,7 +54,7 @@ gulp.task 'express', =>
 
 gulp.task 'watch', =>
   livereload.listen()
-  gulp.watch 'src/stylesheets/*.sass', ['compass']
+  gulp.watch 'src/stylesheets/*.sass', ['bootstrap-sass']
   gulp.watch 'src/scripts/*.coffee', ['coffee']
   gulp.watch 'src/*.jade', ['templates']
   gulp.watch './src/images/**/*', ['images']

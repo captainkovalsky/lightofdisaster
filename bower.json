@@ -1,6 +1,22 @@
 {
-  "name": "pricetracker",
-  "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {}
+  "name": "priceTracker",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vdzundza/priceTracker",
+  "authors": [
+    "vdzundza <victor.dzundza.dev@gmail.com>"
+  ],
+  "description": "Light to disaster project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.0",
+    "fontawesome": "~4.2.0",
+    "jquery": ">=2.1.x"
+  }
 }
