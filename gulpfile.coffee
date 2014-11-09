@@ -64,8 +64,12 @@ gulp.task 'watch', =>
   gulp.watch './src/images/**/*', ['images']
   $.notify {message: "Reload"}
 
+gulp.task 'fonts', =>
+  gulp.src 'src/fonts/**/*.woff'
+  .pipe gulp.dest 'dist/fonts'
 
-gulp.task 'default', ['images', 'watch', 'express', 'demon']
+
+gulp.task 'default', ['fonts', 'images', 'watch', 'express', 'demon']
 gulp.task 'demon', =>
   nodemon {
     script: 'dist/scripts/app.js'
