@@ -69,7 +69,7 @@ gulp.task 'fonts', =>
   .pipe gulp.dest 'dist/fonts'
 
 
-gulp.task 'default', ['fonts', 'images', 'watch', 'express', 'demon']
+gulp.task 'default', ['express', 'demon']
 gulp.task 'demon', =>
   nodemon {
     script: 'dist/scripts/app.js'
