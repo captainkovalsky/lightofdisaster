@@ -11,6 +11,8 @@
     "gulp-concat": "*",
     "gulp-bower": "0.0.6",
     "gulp-ruby-sass": "~0.7.1",
+    "gulp-imagemin": "*",
+    "imagemin-pngquant": "*",
     "express": "*",
     "marked": "*",
     "gulp-compass": "*",

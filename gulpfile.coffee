@@ -6,6 +6,7 @@ concat = require 'gulp-concat'
 express = require 'express'
 path = require 'path'
 sass = require 'gulp-ruby-sass'
+pngquant = require 'imagemin-pngquant'
 app = express()
 
 gulp.task 'bootstrap-sass', =>
@@ -35,8 +36,11 @@ gulp.task 'coffee', =>
 
 gulp.task 'images', =>
   gulp.src './src/images/**/*'
+  .pipe $.imagemin {
+    progressive: true
+    use: [pngquant({quality: '65-80', speed: 4})]
+  }
   .pipe gulp.dest './dist/images/'
-  .pipe livereload()
 
 gulp.task 'templates', =>
   gulp.src 'src/*.jade'
