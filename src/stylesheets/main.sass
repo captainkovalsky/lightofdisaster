@@ -1,5 +1,6 @@
 //Actually this approach is bad, but I must do this site fast
 @import 'bootstrap'
+@import 'bootstrap-variables'
 @import 'fonts'
 
 *
@@ -19,14 +20,16 @@ body
   div.menu
     display: inline-block
   div.menu > span
-    color: #97a9b2
     display: inline-block
     line-height: 16px
     text-transform: uppercase
     font-weight: bold
     padding: 5px 10px
     text-align: center
-    &:hover
+    a
+      text-decoration: none
+      color: #97a9b2
+    a:hover
       color: #ffffff
       cursor: pointer
 
