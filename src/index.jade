@@ -8,27 +8,28 @@ html.no-js
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet", href="stylesheets/main.css")
     script(src="scripts/app.js")
-  body
-    div#logo
-    div#footer
-      div.menu
+  body.container-fluid
+    div.row
+      div#logo.col-md-offset-1.col-lg-offset-2.col-xs-offset-0
+    div.row
+      div#footer.menu.col-md-10.col-md-offset-2.col-xs-offset-1.col-xs-9
         span
           | About
         span
           | Lyrics
         span
           | Facebook
-        span
+        span.hidden-xs
           | Vk
-        span
+        span.hidden-xs.hidden-sm
           | Soundclound
-        span
+        span.hidden-xs.hidden-sm
           | Bandcamp
-        span
+        span.hidden-xs.hidden-sm
           | Reverbnation
-        span
+        span.hidden-xs
           | Youtube
-        span
+        span.hidden-xs.hidden-sm
           | Twitter
 
 

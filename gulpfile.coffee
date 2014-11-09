@@ -20,6 +20,7 @@ gulp.task 'bootstrap-sass', =>
   .pipe gulp.dest 'dist/stylesheets'
   .pipe livereload()
 
+
 gulp.task 'coffee', =>
   gulp.src 'src/scripts/main.coffee', {read: false}
   .pipe $.plumber()
@@ -31,8 +32,6 @@ gulp.task 'coffee', =>
   }
   .pipe $.rename 'app.js'
   .pipe gulp.dest 'dist/scripts'
-  .pipe livereload()
-
 
 gulp.task 'images', =>
   gulp.src './src/images/**/*'
@@ -68,6 +67,7 @@ gulp.task 'fonts', =>
   gulp.src 'src/fonts/**/*.woff'
   .pipe gulp.dest 'dist/fonts'
 
+gulp.task 'dev', ['watch', 'express', 'demon']
 
 gulp.task 'default', ['express', 'demon']
 gulp.task 'demon', =>

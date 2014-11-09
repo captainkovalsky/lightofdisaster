@@ -6,8 +6,18 @@
   font-family: 'Myriad Pro Regular'
   font-size: 16px
 
+@media (min-width: 1200px)
+  .autosize-lg
+    width: 100%
+
+@media (min-width: 768px)
+  .autosize-md
+    width: 100%
+
 body
   background-image: url("../images/background.png")
+  div.menu
+    display: inline-block
   div.menu > span
     color: #97a9b2
     display: inline-block
@@ -15,9 +25,15 @@ body
     text-transform: uppercase
     font-weight: bold
     padding: 5px 10px
+    text-align: center
+    &:hover
+      color: #ffffff
+      cursor: pointer
 
 #logo
+  max-width: 100%
   background-image: url("../images/Logo.png")
   background-size: contain
   width: 443px
   height: 337px
+  background-repeat: no-repeat
