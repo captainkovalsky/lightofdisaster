@@ -9,11 +9,27 @@ html.no-js
     link(rel="stylesheet", href="stylesheets/main.css")
     script(src="scripts/app.js")
   body.container-fluid
+    span.visible-xs.debug
+      | SIZE XS
+    span.visible-sm.debug
+      | SIZE SM
+    span.visible-md.debug
+      | SIZE MD
+    span.visible-lg.debug
+      | SIZE LG
+
     div.row
       div#logo.col-md-offset-1.col-lg-offset-2.col-xs-offset-0
+    div.row.margin-top-70
+      div#album-1.album.col-md-offset-1.col-lg-offset-2.col-xs-offset-0
+      div#album-2.album
+        span.coming-soon coming soon...
+    div.row
+      div.album-button
+      div.album-button
     div.row
       div#footer.menu.col-md-10.col-md-offset-2.col-xs-offset-1.col-xs-9
-        span
+        span.first
           a(href="#") About
         span
           a(href="#") Lyrics
