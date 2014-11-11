@@ -1,0 +1,36 @@
+div.menu
+  display: inline-block
+  margin-left: $left-content-margin
+
+div.menu > span
+  display: inline-block
+  line-height: 15px
+  padding: 1px 30px 0 0
+  text-transform: uppercase
+  font-weight: bold
+
+  text-align: center
+  position: relative
+
+  &:after
+    content: ""
+    vertical-align: baseline
+    position: absolute
+    right: 14px
+    display: block
+    width: 3px
+    height: 70%
+    top: 10%
+    border-radius: 10px 10px 10px 10px
+    background: $text-color
+
+  &.last
+    &:after
+      display: none
+
+  a
+    text-decoration: none
+    color: $text-color
+  a:hover
+    color: #ffffff
+    cursor: pointer

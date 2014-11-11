@@ -1,8 +1,11 @@
 //Actually this approach is bad, but I must do this site fast
+@import 'variables'
 @import 'bootstrap'
-@import 'bootstrap-variables'
+@import 'margins'
 @import 'fonts'
-$text-color: #97a9b2
+@import 'menu'
+@import 'buttons'
+@import 'albums'
 
 *
   //font-family: 'Myriad Pro Regular'
@@ -13,89 +16,11 @@ $text-color: #97a9b2
 
 body
   background-image: url("../images/background.png")
-  background-position-x: -180px
-  div.menu
-    display: inline-block
-  div.menu > span
-    display: inline-block
-    line-height: 16px
-    text-transform: uppercase
-    font-weight: bold
-
-    text-align: center
-    position: relative
-
-    @media(max-width: 767px)
-      padding: 0px 0px
-      display: block
-
-    @media(min-width: 768px)
-      padding: 5px 20px
-      &:before
-        content: ""
-        vertical-align: baseline
-        left: -3px
-        position: absolute
-        display: block
-        width: 3px
-        height: 70%
-        top: 10%
-        border-radius: 10px 10px 10px 10px
-        background: $text-color
-
-      &.first
-        &:before
-          display: none
-
-    a
-      text-decoration: none
-      color: $text-color
-    a:hover
-      color: #ffffff
-      cursor: pointer
-
-.album
-  width: 430px
-  height: 430px
-  display: inline-block
-  border: 3px solid $text-color
-
-.coming-soon
-  opacity: 0.75
-  font-size: 36px
-  font-weight: bold
-  color: #97a9b2
-  width: 100%
-  line-height: 430px
-  text-align: center
-  display: block
-
-#album-1
-  background: url("../images/album1.png")
-
-@media(max-width: 767px)
-  #album-2
-    margin-left: 0px
-
-@media(min-width: 768px)
-
-@media(min-width: 992px)
-
-@media(min-width: 1200px)
-  #album-2
-    margin-left: 105px
-
-#album-2
-  background: url("../images/album2.png")
-  vertical-align: top
 
 #logo
-  max-width: 100%
   background-image: url("../images/Logo.png")
   background-size: contain
-  width: 443px
-  height: 337px
+  width: 436px
+  height: 330px
+  margin-left: $left-content-margin
   background-repeat: no-repeat
-
-.margin-top-70
-  margin-top: 70px
