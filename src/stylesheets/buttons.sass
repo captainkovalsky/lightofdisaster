@@ -1,11 +1,18 @@
+@import 'mixins'
 $buy-button-margin-left: 60px
 div.buttons
   margin-top: 35px
-  padding-left: 470px
+  +respond-to(large)
+    padding-left: 470px
+  +respond-to(medium)
+    padding-left: 0
 
 div.album-2
   display: inline-block
-  margin-left: 215px
+  +respond-to(large)
+    margin-left: 215px
+  +respond-to(medium)
+    margin-left: 110px
 
 .button
   display: inline-block
