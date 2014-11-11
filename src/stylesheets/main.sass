@@ -1,5 +1,6 @@
 //Actually this approach is bad, but I must do this site fast
 @import 'variables'
+@import 'mixins'
 @import 'bootstrap'
 @import 'margins'
 @import 'fonts'
@@ -15,12 +16,22 @@
   color: white
 
 body
-  background-image: url("../images/background.png")
-
+  +respond-to(medium)
+    background-image: url("../images/background.png")
+  +respond-to(large)
+    background-image: url("../images/background.png")
+  +respond-to(small)
+    background-image: url("../images/background.png")
 #logo
   background-image: url("../images/Logo.png")
   background-size: contain
   width: 436px
   height: 330px
-  margin-left: $left-content-margin
   background-repeat: no-repeat
+
+  +respond-to(small)
+    margin-left: 0
+
+  +respond-to(large)
+    margin-left: $left-content-margin
+

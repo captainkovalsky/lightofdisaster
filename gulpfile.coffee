@@ -10,7 +10,7 @@ pngquant = require 'imagemin-pngquant'
 app = express()
 
 gulp.task 'sass', =>
-  gulp.src ['./src/stylesheets/main.sass', 'src/./src/stylesheets/**/*.sass']
+  gulp.src ['./src/stylesheets/hover/hover.scss', './src/stylesheets/main.sass', 'src/./src/stylesheets/**/*.sass']
   .pipe $.plumber()
   .pipe sass({
     'sourcemap=none': true

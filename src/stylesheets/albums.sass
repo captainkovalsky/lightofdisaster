@@ -1,5 +1,10 @@
+@import 'mixins'
 .albums
-  margin-left: $left-content-margin
+  +respond-to(small)
+    margin-left: 0
+
+  +respond-to(large)
+    margin-left: $left-content-margin
 
 .album
   width: 430px
@@ -15,12 +20,15 @@
   width: 100%
   line-height: 430px
   text-align: center
-  display: block
+  display: inline-block
 
 #album-1
   background: url("../images/album1.png")
 
 #album-2
-  margin-left: 105px
+  +respond-to(small)
+    margin-left: 0
+  +respond-to(large)
+    margin-left: 105px
   background: url("../images/album2.png")
   vertical-align: top
