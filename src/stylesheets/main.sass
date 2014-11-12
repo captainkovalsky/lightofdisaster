@@ -1,12 +1,15 @@
 //Actually this approach is bad, but I must do this site fast
+@import "compass/reset"
+@import "compass/css3"
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap"
 @import 'variables'
 @import 'mixins'
-@import 'bootstrap'
 @import 'margins'
 @import 'fonts'
 @import 'menu'
 @import 'buttons'
 @import 'albums'
+@include font-face("RusWolfenstein Regular", font-files("wolf/ruswolfenstein_regular-webfont.woff2", "wolf/ruswolfenstein_regular-webfont.woff", "wolf/ruswolfenstein_regular-webfont.eot", "wolf/ruswolfenstein_regular-webfont.ttf", "wolf/ruswolfenstein_regular-webfont.svg"))
 
 *
   //font-family: 'Myriad Pro Regular'
@@ -16,12 +19,14 @@
   color: white
 
 body
+  background-image: url("../images/background.png")
+
   +respond-to(medium)
-    background-image: url("../images/background.png")
+    background-position-x: -445px
   +respond-to(large)
-    background-image: url("../images/background.png")
   +respond-to(small)
-    background-image: url("../images/background.png")
+    background-position-x: -805px
+
 #logo
   background-image: url("../images/Logo.png")
   background-size: contain
@@ -32,8 +37,8 @@ body
   +respond-to(small)
     margin-left: 0
 
+  +respond-to(medium)
+    margin-left: $left-content-margin-medium
+
   +respond-to(large)
-    margin-left: $left-content-margin
-
-
-
+    margin-left: $left-content-margin-large

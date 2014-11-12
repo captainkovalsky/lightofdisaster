@@ -1,17 +1,30 @@
+@import "variables"
+@import "mixins"
 div.menu
-  margin-top: 95px
+  font-family: "RusWolfenstein Regular"
   display: inline-block
-  margin-left: $left-content-margin
+  margin-top: 95px
+
+  +respond-to(small)
+    margin-top: 5px
+  +respond-to(medium)
+    margin-left: $left-content-margin-medium
+  +respond-to(large)
+    margin-left: $left-content-margin-large
 
 div.menu > span
   display: inline-block
-  line-height: 15px
+  line-height: 28pt
+  font-size: 28pt
   padding: 1px 30px 0 0
   text-transform: uppercase
-  font-weight: bold
-
   text-align: center
   position: relative
+
+  +respond-to(small)
+    padding: 3px 0
+    display: block
+    font-size: 20pt
 
   &:after
     content: ""
@@ -24,6 +37,8 @@ div.menu > span
     top: 10%
     border-radius: 10px 10px 10px 10px
     background: $text-color
+    +respond-to(small)
+      display: none
 
   &.last
     &:after

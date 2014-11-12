@@ -9,18 +9,6 @@ sass = require 'gulp-ruby-sass'
 pngquant = require 'imagemin-pngquant'
 app = express()
 
-gulp.task 'sass', =>
-  gulp.src ['./src/stylesheets/main.sass', 'src/./src/stylesheets/**/*.sass']
-  .pipe $.plumber()
-  .pipe sass({
-    'sourcemap=none': true
-    compass: true
-    loadPath: './bower_components/bootstrap-sass-official/assets/stylesheets'
-  })
-  .pipe gulp.dest 'dist/stylesheets'
-#  .pipe livereload()
-
-
 gulp.task 'coffee', =>
   gulp.src 'src/scripts/main.coffee', {read: false}
   .pipe $.plumber()
@@ -57,17 +45,16 @@ gulp.task 'express', =>
 
 gulp.task 'watch', =>
   livereload.listen()
-  gulp.watch 'src/stylesheets/*.sass', ['sass']
   gulp.watch 'src/scripts/*.coffee', ['coffee']
   gulp.watch 'src/*.jade', ['templates']
   gulp.watch './src/images/**/*', ['images']
   $.notify {message: "Reload"}
 
 gulp.task 'fonts', =>
-  gulp.src 'src/fonts/**/*.woff'
+  gulp.src 'src/fonts/**'
   .pipe gulp.dest 'dist/fonts'
 
-gulp.task 'dev', ['sass', 'templates', 'watch', 'express', 'demon']
+gulp.task 'dev', ['fonts', 'templates', 'watch', 'express', 'demon']
 
 gulp.task 'default', ['express', 'demon']
 gulp.task 'demon', =>

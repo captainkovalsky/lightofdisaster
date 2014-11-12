@@ -1,11 +1,20 @@
+@import 'variables'
 @import 'mixins'
-$buy-button-margin-left: 60px
+@import "compass/utilities/sprites"
+@import "../images/buy/*.png"
+@import "../images/download/*.png"
+
 div.buttons
-  margin-top: 35px
-  +respond-to(large)
-    padding-left: 470px
-  +respond-to(medium)
+  margin-top: 36px
+
+  +respond-to(small)
     padding-left: 0
+
+  +respond-to(medium)
+    padding-left: $left-content-margin-medium
+
+  +respond-to(large)
+    padding-left: $left-content-margin-large
 
 div.album-2
   display: inline-block
@@ -16,22 +25,22 @@ div.album-2
 
 .button
   display: inline-block
-  background-position: 0 0
-  background-repeat: no-repeat
   &.first
     margin-left: 140px
 
-.button.buy
+
+.button
   margin-left: $buy-button-margin-left
-  background-image: url("../images/buy.png")
   width: 66px
   height: 48px
+  @include buy-sprite(buy)
+
   &:hover
-    background-position: -66px 0
+    @include buy-sprite(buy_hover)
 
 .button.download
-  background-image: url("../images/download.png")
+  @include download-sprite(download)
   width: 49px
   height: 47px
   &:hover
-    background-position: -49px 0
+    @include download-sprite(download_hover)
