@@ -25,22 +25,24 @@ div.album-2
 
 .button
   display: inline-block
+
   &.first
     margin-left: 140px
 
 
-.button
+.button.buy
   margin-left: $buy-button-margin-left
-  width: 66px
-  height: 48px
+  width: 68px
+  height: 50px
   @include buy-sprite(buy)
 
   &:hover
     @include buy-sprite(buy_hover)
 
 .button.download
+  width: 50px
+  height: 51px
   @include download-sprite(download)
-  width: 49px
-  height: 47px
+
   &:hover
     @include download-sprite(download_hover)

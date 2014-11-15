@@ -23,10 +23,10 @@ gulp.task 'coffee', =>
 
 gulp.task 'images', =>
   gulp.src './src/images/**/*'
-  .pipe $.imagemin {
-    progressive: true
-    use: [pngquant({quality: '65-80', speed: 4})]
-  }
+#  .pipe $.imagemin {
+#    progressive: true
+#    use: [pngquant({quality: '65-80', speed: 4})]
+#  }
   .pipe gulp.dest './dist/images/'
 
 gulp.task 'templates', =>
