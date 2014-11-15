@@ -1,5 +1,8 @@
 @import 'variables'
 @import 'mixins'
+
+.album-images
+  margin-top: 20px
 .albums
 
   +respond-to(small)
@@ -31,6 +34,7 @@
   background: url("../images/album1.png")
 
 #album-2
+  opacity: 0.75
   +respond-to(small)
     margin-left: 0
   +respond-to(large)

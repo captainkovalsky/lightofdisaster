@@ -5,7 +5,7 @@
 @import "../images/download/*.png"
 
 div.buttons
-  margin-top: 36px
+  margin-top: 25px
 
   +respond-to(small)
     padding-left: 0
@@ -16,11 +16,10 @@ div.buttons
   +respond-to(large)
     padding-left: $left-content-margin-large
 
-  a
-    text-decoration: none
+.album-2, .album-1
+  display: inline-block
 
 div.album-2
-  display: inline-block
   +respond-to(large)
     margin-left: 215px
   +respond-to(medium)
@@ -29,9 +28,11 @@ div.album-2
 .button
   display: inline-block
 
+  &:hover
+    cursor: pointer
+
   &.first
     margin-left: 140px
-
 
 .button.buy
   margin-left: $buy-button-margin-left
