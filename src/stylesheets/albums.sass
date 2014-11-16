@@ -18,8 +18,24 @@
     background: url("../images/album1.png")
 
 #album-2
+  position: relative
+  +respond-to(small)
+    margin-left: 0
+  +respond-to(large)
+    margin-left: 105px
+
   .album-content
-    opacity: 0.75
+    &:after
+      content: ""
+      background: url("../images/album2.png")
+      opacity: 0.80
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      position: absolute
+      z-index: -1
+
     .coming-soon
       font-size: 36px
       font-weight: bold
@@ -28,9 +44,6 @@
       line-height: 430px
       text-align: center
       display: inline-block
-  +respond-to(small)
-    margin-left: 0
-  +respond-to(large)
-    margin-left: 105px
-  background: url("../images/album2.png")
-  vertical-align: top
+
+
+
