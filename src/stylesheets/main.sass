@@ -18,9 +18,13 @@
 .debug
   color: white
 
+div.content
+  font-family: 'Myriad Pro Regular'
+  color: white
+  max-width: 960px
+
 body
   background-image: url("../images/background.png")
-
   +respond-to(medium)
     background-position-x: -445px
   +respond-to(large)
@@ -33,7 +37,9 @@ body
   width: 436px
   height: 330px
   background-repeat: no-repeat
+  cursor: pointer
 
+.inner-container
   +respond-to(small)
     margin-left: 0
 

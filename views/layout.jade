@@ -1,0 +1,53 @@
+doctype
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Dyno
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="stylesheets/main.css")
+  body.container-fluid
+    div.inner-container
+      span.visible-xs.debug
+        | SIZE XS
+      span.visible-sm.debug
+        | SIZE SM
+      span.visible-md.debug
+        | SIZE MD
+      span.visible-lg.debug
+        | SIZE LG
+      div.row(onclick='window.location = "/"')
+        div#logo
+      div.content
+        block content
+
+      div.row
+        div#footer.menu
+          span
+            a(href="/about") About
+          span
+            a(href="/lyrics") Lyrics
+          span
+            a(href="https://www.facebook.com/lightofdisaster/") Facebook
+          span
+            a(href="http://vk.com/club80115823/") Vk
+          span
+            a(href="https://soundcloud.com/light-of-disaster/") Soundclound
+          span
+            a(href="https://lightofdisaster.bandcamp.com/") Bandcamp
+          span
+            a(href="http://www.reverbnation.com/lightofdisaster?profile_view_source=header_icon_nav/") Reverbnation
+          span
+            a(href="https://www.youtube.com/lightofdisaster1/") Youtube
+          span.last
+            a(href="https://twitter.com/LightOfDisaster/") Twitter
+  //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+  //-
+      script
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');

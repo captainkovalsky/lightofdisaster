@@ -7,10 +7,15 @@ express = require 'express'
 path = require 'path'
 sass = require 'gulp-ruby-sass'
 pngquant = require 'imagemin-pngquant'
-app = express()
+session = require('express-session')
+cookieParser = require('cookie-parser')
+bodyParser = require("body-parser")
+
+app = module.exports.app = exports.app = express()
+routes = require './app/routes.coffee'
 
 gulp.task 'coffee', =>
-  gulp.src 'src/scripts/main.coffee', {read: false}
+  gulp.src './app/routes.coffee', {read: false}
   .pipe $.plumber()
   .pipe $.browserify {
     debug: true
@@ -29,32 +34,32 @@ gulp.task 'images', =>
 #  }
   .pipe gulp.dest './dist/images/'
 
-gulp.task 'templates', =>
-  gulp.src 'src/*.jade'
-  .pipe $.plumber()
-  .pipe $.jade {
-    pretty: true
-  }
-  .pipe gulp.dest 'dist/'
-  .pipe livereload()
 
 gulp.task 'express', =>
-  app.use express.static(path.resolve './dist')
+  app.set 'view engine', 'jade'
+  app.set 'views', __dirname + '/views'
+  app.use bodyParser()
+  app.use express.static './dist'
+  routes app
   app.listen 1337
   $.util.log 'Listening on port: 1337'
+
+gulp.task 'templates', =>
+  gulp.src 'src/*.jade'
+  .pipe livereload()
 
 gulp.task 'watch', =>
   livereload.listen()
   gulp.watch 'src/scripts/*.coffee', ['coffee']
-  gulp.watch 'src/*.jade', ['templates']
   gulp.watch './src/images/**/*', ['images']
+  gulp.watch './views/**/*', ['templates']
   $.notify {message: "Reload"}
 
 gulp.task 'fonts', =>
   gulp.src 'src/fonts/**'
   .pipe gulp.dest 'dist/fonts'
 
-gulp.task 'dev', ['fonts', 'templates', 'watch', 'express', 'demon']
+gulp.task 'dev', ['fonts', 'watch', 'express', 'demon']
 
 gulp.task 'default', ['express', 'demon']
 gulp.task 'demon', =>
