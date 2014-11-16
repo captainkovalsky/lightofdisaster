@@ -22,7 +22,7 @@
 
 body
   background: #000000 url("../images/background2.png") no-repeat top center
-
+  background-position-x: 100%
 div.content
   font-family: 'Myriad Pro Regular'
   color: #fafafa
@@ -31,10 +31,15 @@ div.content
 .inner-container
   max-width: 960px
   margin-top: 20px
+  margin-right: 25%
+  +respond-to(large)
+    float: right
   +respond-to(medium)
-    background-position-x: -445px
+    float: right
   +respond-to(small)
-    background-position-x: -805px
+    float: left
+  +respond-to(xs)
+    float: left
 
 #logo
   background-image: url("../images/Logo.png")
@@ -53,13 +58,3 @@ div.content
     width: $logo-large-width - 300px
     height: $logo-large-height - 300px
   cursor: pointer
-
-.inner-container
-  +respond-to(small)
-    margin-left: 0
-
-  +respond-to(medium)
-    margin-left: $left-content-margin-medium
-
-  +respond-to(large)
-    margin-left: $left-content-margin-large

@@ -6,8 +6,20 @@
 
 .album
   .album-content
-    width: 430px
-    height: 430px
+    +respond-to(large)
+      width: $album-large
+      height: $album-large
+    +respond-to(medium)
+      width: $album-medium
+      height: $album-medium
+    +respond-to(small)
+      width: $album-small
+      height: $album-small
+    +respond-to(xs)
+      width: $album-xs
+      height: $album-xs
+      display: block
+      float: right
   vertical-align: middle
   display: inline-block
   border: 3px solid $text-color
@@ -19,12 +31,15 @@
     background: url("../images/album1.png")
 
 #album-2
-  float: right
   position: relative
-  //+respond-to(small)
-  //  margin-left: 10px
-  //+respond-to(large)
-    //margin-left: 105px
+  +respond-to(large)
+    float: right
+  +respond-to(medium)
+    float: right
+  +respond-to(small)
+    float: left
+  +respond-to(xs)
+    float: left
 
   .album-content
     &:after
@@ -39,13 +54,20 @@
       z-index: -1
 
     .coming-soon
-      font-size: 36px
       font-weight: bold
       color: #97a9b2
       width: 100%
-      line-height: 430px
       text-align: center
       display: inline-block
-
-
-
+      +respond-to(large)
+        font-size: 36px
+        line-height: 430px
+      +respond-to(medium)
+        font-size: 36px
+        line-height: 430px
+      +respond-to(small)
+        font-size: 36px
+        line-height: 430px
+      +respond-to(xs)
+        font-size: 14px
+        line-height: $album-xs
