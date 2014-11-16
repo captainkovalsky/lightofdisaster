@@ -23,15 +23,22 @@
 body
   background: #000000 url("../images/background2.png") no-repeat top center
   background-position-x: 60%
+//+respond-to(large)
+//  background-size: 100%
+//+respond-to(medium)
+//  background-size: 90%
+//+respond-to(small)
+//  background-size: 60%
+//+respond-to(xs)
+//  background-size: 20%
+
 div.content
   font-family: 'Myriad Pro Regular'
   color: #fafafa
-  max-width: 1200px
 
 .inner-container
-  max-width: 1200px
-  margin-top: 20px
-  margin-left: 15%
+  width: 960px
+  margin: 0 auto
   +respond-to(large)
   +respond-to(medium)
   +respond-to(small)
