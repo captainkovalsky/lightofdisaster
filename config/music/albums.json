@@ -1,0 +1,31 @@
+{
+  "albums": [
+    {
+      "title": "A STRUGGLE MAKES SENSE",
+      "year": 2008,
+      "lyricsFolder": "a-struggle-makes-sense",
+      "songs": [
+        {
+          "title": "A Struggle Song",
+          "number": 1,
+          "file": "struggle-song"
+        },
+        {
+          "title": "All Falls Aside",
+          "number": 2,
+          "file": "all-falls-aside"
+        },
+        {
+          "title": "Intrusion",
+          "number": 3,
+          "file": "intrusion"
+        },
+        {
+          "title": "The Repentence",
+          "number": 4,
+          "file": "reptence"
+        }
+      ]
+    }
+  ]
+}
