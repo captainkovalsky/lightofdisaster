@@ -32,14 +32,7 @@
 
 #album-2
   position: relative
-  +respond-to(large)
-    float: right
-  +respond-to(medium)
-    float: right
-  +respond-to(small)
-    float: left
-  +respond-to(xs)
-    float: left
+  margin-left: $left-album-margin
 
   .album-content
     &:after
@@ -61,13 +54,13 @@
       display: inline-block
       +respond-to(large)
         font-size: 36px
-        line-height: 430px
+        line-height: $album-large
       +respond-to(medium)
-        font-size: 36px
-        line-height: 430px
+        font-size: 28px
+        line-height: $album-medium
       +respond-to(small)
-        font-size: 36px
-        line-height: 430px
+        font-size: 18px
+        line-height: $album-small
       +respond-to(xs)
         font-size: 14px
         line-height: $album-xs

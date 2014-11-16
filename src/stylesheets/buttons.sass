@@ -9,19 +9,25 @@ div.buttons
 
 .album-2, .album-1
   display: inline-block
+  +respond-to(large)
+    width: $album-large
+  +respond-to(medium)
+    width: $album-medium
+  +respond-to(small)
+    width: $album-small
+  +respond-to(xs)
+    width: $album-xs
 
 div.album-2
-  float: right
-  margin-right: 110px
+  margin-left: $left-album-margin
 
 .button
   display: inline-block
 
   &:hover
     cursor: pointer
-
   &.first
-    margin-left: 140px
+    margin-left: 25%
 
 .button.buy
   margin-left: $buy-button-margin-left
