@@ -1,18 +1,20 @@
 @import "variables"
 @import "mixins"
 div.menu
+  display: table
   font-family: "RusWolfenstein Regular"
-  display: inline-block
   margin-top: 52px
-
   +respond-to(small)
     margin-top: 5px
 
-div.menu > span
-  display: inline-block
+div.menu-container
+  display: table-row
+
+div.menu-container > span
+  display: table-cell
+  padding: 0 15px 0 15px
   line-height: 28pt
   font-size: 28pt
-  padding: 1px 30px 0 0
   text-transform: uppercase
   text-align: center
   position: relative
@@ -26,7 +28,7 @@ div.menu > span
     content: ""
     vertical-align: baseline
     position: absolute
-    right: 14px
+    right: -1px
     display: block
     width: 3px
     height: 69%
