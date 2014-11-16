@@ -1,6 +1,9 @@
 =respond-to($media)
-  @if $media == small
-    @media only screen and (max-width: $screen-sm-min)
+  @if media == xs
+    @media only screen and (max-width: $screen-xs-max)
+      @content
+  @else if $media == small
+    @media only screen and (min-width: $screen-xs-max + 1) and (max-width: $screen-sm-min)
       @content
   @else if $media == medium
     @media only screen and (min-width: $screen-sm-min + 1) and (max-width: $large - 1)

@@ -30,17 +30,28 @@ div.content
 
 .inner-container
   max-width: 960px
+  margin-top: 20px
   +respond-to(medium)
     background-position-x: -445px
-  +respond-to(large)
   +respond-to(small)
     background-position-x: -805px
 
 #logo
   background-image: url("../images/Logo.png")
   background-size: contain
-  width: 436px
-  height: 330px
+  background-repeat: no-repeat
+  +respond-to(large)
+    width: $logo-large-width
+    height: $logo-large-height
+  +respond-to(medium)
+    width: $logo-large-width - 100px
+    height: $logo-large-height - 100px
+  +respond-to(small)
+    width: $logo-large-width - 200px
+    height: $logo-large-height - 200px
+  +respond-to(xs)
+    width: $logo-large-width - 300px
+    height: $logo-large-height - 300px
   cursor: pointer
 
 .inner-container
