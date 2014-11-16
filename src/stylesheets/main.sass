@@ -9,6 +9,7 @@
 @import 'menu'
 @import 'buttons'
 @import 'albums'
+@import 'songs'
 @include font-face("RusWolfenstein Regular", font-files("wolf/ruswolfenstein_regular-webfont.woff2", "wolf/ruswolfenstein_regular-webfont.woff", "wolf/ruswolfenstein_regular-webfont.eot", "wolf/ruswolfenstein_regular-webfont.ttf", "wolf/ruswolfenstein_regular-webfont.svg"))
 
 *
@@ -18,13 +19,15 @@
 .debug
   color: white
 
+body
+  background: #000000 url("../images/background.png") no-repeat top center
+
 div.content
   font-family: 'Myriad Pro Regular'
-  color: white
+  color: #fafafa
   max-width: 960px
 
-body
-  background-image: url("../images/background.png")
+.inner-container
   +respond-to(medium)
     background-position-x: -445px
   +respond-to(large)
@@ -36,8 +39,6 @@ body
   background-size: contain
   width: 436px
   height: 330px
-  background-repeat: no-repeat
-  background-repeat-y: no-repeat
   cursor: pointer
 
 .inner-container
