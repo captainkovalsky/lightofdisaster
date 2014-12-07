@@ -11,20 +11,26 @@ block content
   div.row.buttons.hidden-sm.hidden-xs
     div.album-1
       div.button.first.download(data-link="/download/album/struggle-makes-sense")
-      div.button.buy(data-link="#")
+      div.button.buy(data-link="https://lightofdisaster.bandcamp.com/releases")
     div.album-2
       div.button.first.download(data-link="#")
       div.button.buy(data-link="#")
 
   script.
     //download links
-    var struggleMakesSenseDownloadButton = document.querySelectorAll('.album-1 .button.first.download');
-    var buttonRow = document.querySelector('div.row.buttons');
+    var struggleMakesSenseDownloadButton = document.querySelector('.album-1 .button.download');
+    var struggleMakesSenseBuyButton = document.querySelector('.album-1 .button.buy');
 
-    buttonRow.onclick = function (evt) {
+    struggleMakesSenseDownloadButton.onclick = function (evt) {
       var targetElement = evt.target;
       var downloadLink = targetElement.getAttribute('data-link');
-      console.log('download link: ', downloadLink);
       window.location.href = downloadLink;
-      //alert('clicked');
     };
+
+    struggleMakesSenseBuyButton.onclick = function (evt) {
+      var targetElement = evt.target;
+      var buyLink = targetElement.getAttribute('data-link');
+      window.location.href = buyLink;
+    };
+
+
