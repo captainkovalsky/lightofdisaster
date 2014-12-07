@@ -5,4 +5,7 @@ exports.about = (req, res, next) ->
 exports.lyrics = (req, res, next) ->
   res.render('lyrics')
 
+exports.download = (req, res, next) ->
+  res.download('test', 'test.txt')
+
 
