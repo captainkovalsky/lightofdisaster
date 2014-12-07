@@ -15,3 +15,16 @@ block content
     div.album-2
       div.button.first.download(data-link="#")
       div.button.buy(data-link="#")
+
+  script.
+    //download links
+    var struggleMakesSenseDownloadButton = document.querySelectorAll('.album-1 .button.first.download');
+    var buttonRow = document.querySelector('div.row.buttons');
+
+    buttonRow.onclick = function (evt) {
+      var targetElement = evt.target;
+      var downloadLink = targetElement.getAttribute('data-link');
+      console.log('download link: ', downloadLink);
+      window.location.href = downloadLink;
+      //alert('clicked');
+    };

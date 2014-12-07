@@ -38,6 +38,7 @@ gulp.task 'images', =>
 gulp.task 'express', =>
   app.set 'view engine', 'jade'
   app.set 'views', __dirname + '/views'
+  app.set 'basePath', __dirname
   app.use bodyParser()
   app.use express.static './dist'
   routes app
@@ -61,10 +62,18 @@ gulp.task 'fonts', =>
 
 gulp.task 'dev', ['fonts', 'watch', 'express', 'demon']
 
-gulp.task 'default', ['express', 'demon']
-gulp.task 'demon', =>
+gulp.task 'default', ['express', 'demon-prod']
+gulp.task 'dev', ['express', 'demon-dev']
+
+gulp.task 'demon-dev', =>
   nodemon {
     script: 'dist/scripts/app.js'
     env: {'NODE_ENV': 'development'}
     nodeArgs: ['--debug=9999']
+  }
+
+gulp.task 'demon-prod', =>
+  nodemon {
+    script: 'dist/scripts/app.js'
+    env: {'NODE_ENV': 'production'}
   }
