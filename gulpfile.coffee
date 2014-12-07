@@ -42,8 +42,7 @@ gulp.task 'express', =>
   app.use bodyParser()
   app.use express.static './dist'
   routes app
-  app.listen 1337
-  $.util.log 'Listening on port: 1337'
+  app.listen 80
 
 gulp.task 'templates', =>
   gulp.src 'src/*.jade'
@@ -62,18 +61,9 @@ gulp.task 'fonts', =>
 
 gulp.task 'dev', ['fonts', 'watch', 'express', 'demon']
 
-gulp.task 'default', ['express', 'demon-prod']
-gulp.task 'dev', ['express', 'demon-dev']
+gulp.task 'default', ['express', 'demon']
 
-gulp.task 'demon-dev', =>
+gulp.task 'demon', =>
   nodemon {
     script: 'dist/scripts/app.js'
-    env: {'NODE_ENV': 'development'}
-    nodeArgs: ['--debug=9999']
-  }
-
-gulp.task 'demon-prod', =>
-  nodemon {
-    script: 'dist/scripts/app.js'
-    env: {'NODE_ENV': 'production'}
   }
