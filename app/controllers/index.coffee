@@ -15,7 +15,7 @@ exports.download = (app) ->
   (req, res, next) ->
     albumName = req.param 'name', null
     basePath = app.get 'basePath'
-    dataAlbumFolder = path.resolve basePath, '..', 'data', 'album'
+    dataAlbumFolder = path.resolve basePath, '..', 'data', 'albums'
 
     returnAlbum = (albumZipFile) ->
       file = path.join dataAlbumFolder, "/", albumZipFile
