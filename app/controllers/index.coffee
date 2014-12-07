@@ -18,7 +18,7 @@ exports.download = (app) ->
     dataAlbumFolder = path.resolve basePath, '..', 'data', 'album'
 
     returnAlbum = (albumZipFile) ->
-      file = path.join dataAlbumFolder, "\\", albumZipFile
+      file = path.join dataAlbumFolder, "/", albumZipFile
       res.download file, albumZipFile
 
     switch albumName
