@@ -42,7 +42,7 @@ gulp.task 'express', =>
   app.use bodyParser()
   app.use express.static './dist'
   routes app
-  app.listen 80
+  app.listen 4545
 
 gulp.task 'templates', =>
   gulp.src 'src/*.jade'
