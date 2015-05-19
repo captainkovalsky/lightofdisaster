@@ -1,36 +1,11 @@
 {
-  "name": "pricetracker",
+  "name": "lightofdisaster",
   "version": "0.0.1",
   "dependencies": {
-    "body-parser": "*",
-    "express-session": "*",
-    "cookie-parser": "*",
     "jade": "*",
-    "gulp-concat": "*",
-    "gulp-util": "*",
-    "gulp": "*",
-    "gulp-uglify": "*",
-    "gulp-jade": "*",
-    "gulp-notify": "*",
-    "gulp-concat": "*",
-    "gulp-bower": "0.0.6",
-    "gulp-ruby-sass": "~0.7.1",
-    "gulp-imagemin": "*",
-    "imagemin-pngquant": "*",
-    "express": "*",
-    "marked": "*",
-    "gulp-compass": "*",
-    "gulp-browserify": "*",
-    "gulp-plumber": "*",
-    "coffeeify": "*",
-    "gulp-rename": "*",
-    "gulp-minify-css": "*",
-    "gulp-load-plugins": "*",
-    "coffee-script": "*",
-    "gulp-nodemon": "*"
+    "express": "*"
   },
   "devDependencies": {
-    "browserify": "*",
-    "gulp-livereload": "*"
+    "browserify": "*"
   }
 }
