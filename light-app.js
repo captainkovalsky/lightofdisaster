@@ -7,11 +7,12 @@ var app = express();
 var bodyParser = require( "body-parser" );
 var routes = require( './app/routes.js' );
 
+app.use(express.static(__dirname + '/src'));
 app.set( 'view engine', 'jade' );
 app.set( 'views', __dirname + '/views' );
 app.set( 'basePath', __dirname );
+
 app.use( bodyParser() );
-app.use( express.static( './dist' ) );
 routes( app );
 app.listen( 5000 );
 

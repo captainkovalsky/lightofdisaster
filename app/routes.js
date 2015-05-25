@@ -1,5 +1,5 @@
 var index;
-index = require( "./controllers/index.coffee" );
+index = require( "./controllers/index.js" );
 module.exports = function ( app ) {
   app.get( "/", index.index );
   app.get( "/about", index.about );
