@@ -8336,13 +8336,13 @@ div.menu-container > span a:hover {
 
 /* line 56, ../images/buy/*.png */
 .buy-sprite, .button.buy, .button.buy:hover {
-  background-image: url('../images/../images/buy-s158e7b146f.png');
+  background-image: url('../images/sprited/buy-s.png');
   background-repeat: no-repeat;
 }
 
 /* line 56, ../images/download/*.png */
 .download-sprite, .button.download, .button.download:hover {
-  background-image: url('../images/../images/download-s901891b755.png');
+  background-image: url('../images/sprited/download-s.png');
   background-repeat: no-repeat;
 }
 
