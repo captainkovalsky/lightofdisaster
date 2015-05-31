@@ -1,0 +1,88 @@
+/* line 4, ../../src/stylesheets/albums.sass */
+.album-images {
+  margin-top: 35px;
+}
+
+/* line 7, ../../src/stylesheets/albums.sass */
+.album {
+  vertical-align: middle;
+  display: inline-block;
+  border: 3px solid #97a9b2;
+}
+/* line 9, ../../src/stylesheets/albums.sass */
+.album .album-content {
+  vertical-align: middle;
+}
+@media only screen and (min-width: 1459px) {
+  /* line 9, ../../src/stylesheets/albums.sass */
+  .album .album-content {
+    width: 430px;
+    height: 430px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1458px) {
+  /* line 9, ../../src/stylesheets/albums.sass */
+  .album .album-content {
+    width: 380px;
+    height: 380px;
+  }
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 9, ../../src/stylesheets/albums.sass */
+  .album .album-content {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+/* line 31, ../../src/stylesheets/albums.sass */
+#album-1 .album-content {
+  background: url("../images/album1.png");
+}
+
+/* line 34, ../../src/stylesheets/albums.sass */
+#album-2 {
+  position: relative;
+  float: right;
+}
+/* line 39, ../../src/stylesheets/albums.sass */
+#album-2 .album-content:after {
+  content: "";
+  background: url("../images/album2.png");
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+/* line 50, ../../src/stylesheets/albums.sass */
+#album-2 .album-content .coming-soon {
+  font-weight: bold;
+  color: #97a9b2;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+@media only screen and (min-width: 1459px) {
+  /* line 50, ../../src/stylesheets/albums.sass */
+  #album-2 .album-content .coming-soon {
+    font-size: 36px;
+    line-height: 430px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1458px) {
+  /* line 50, ../../src/stylesheets/albums.sass */
+  #album-2 .album-content .coming-soon {
+    font-size: 28px;
+    line-height: 380px;
+  }
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 50, ../../src/stylesheets/albums.sass */
+  #album-2 .album-content .coming-soon {
+    font-size: 18px;
+    line-height: 230px;
+  }
+}

@@ -1,0 +1,88 @@
+/* line 56, ../images/buy/*.png */
+.buy-sprite, .button.buy, .button.buy:hover {
+  background-image: url('../images/../images/buy-s158e7b146f.png');
+  background-repeat: no-repeat;
+}
+
+/* line 56, ../images/download/*.png */
+.download-sprite, .button.download, .button.download:hover {
+  background-image: url('../images/../images/download-s901891b755.png');
+  background-repeat: no-repeat;
+}
+
+/* line 7, ../../src/stylesheets/buttons.sass */
+div.buttons {
+  margin-top: 25px;
+}
+
+/* line 10, ../../src/stylesheets/buttons.sass */
+.album-2, .album-1 {
+  display: inline-block;
+}
+@media only screen and (min-width: 1459px) {
+  /* line 10, ../../src/stylesheets/buttons.sass */
+  .album-2, .album-1 {
+    width: 430px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1458px) {
+  /* line 10, ../../src/stylesheets/buttons.sass */
+  .album-2, .album-1 {
+    width: 380px;
+  }
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 10, ../../src/stylesheets/buttons.sass */
+  .album-2, .album-1 {
+    width: 230px;
+  }
+}
+
+/* line 24, ../../src/stylesheets/buttons.sass */
+div.album-2 {
+  float: right;
+}
+
+/* line 27, ../../src/stylesheets/buttons.sass */
+.button {
+  display: inline-block;
+}
+/* line 30, ../../src/stylesheets/buttons.sass */
+.button:hover {
+  cursor: pointer;
+}
+/* line 32, ../../src/stylesheets/buttons.sass */
+.button.first {
+  margin-left: 135px;
+}
+
+/* line 35, ../../src/stylesheets/buttons.sass */
+.button.buy {
+  margin-left: 60px;
+  width: 68px;
+  height: 50px;
+  background-position: 0 0;
+}
+/* line 59, ../../../../../usr/local/rvm/gems/ruby-head/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.button.buy:hover, .button.buy.buy-hover {
+  background-position: 0 -50px;
+}
+/* line 41, ../../src/stylesheets/buttons.sass */
+.button.buy:hover {
+  background-position: 0 -50px;
+}
+
+/* line 44, ../../src/stylesheets/buttons.sass */
+.button.download {
+  width: 50px;
+  height: 51px;
+  background-position: 0 0;
+}
+/* line 59, ../../../../../usr/local/rvm/gems/ruby-head/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.button.download:hover, .button.download.download-hover {
+  background-position: 0 -51px;
+}
+/* line 49, ../../src/stylesheets/buttons.sass */
+.button.download:hover {
+  background-position: 0 -51px;
+}

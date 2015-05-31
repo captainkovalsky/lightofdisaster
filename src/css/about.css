@@ -1,0 +1,9 @@
+/* line 1, ../../src/stylesheets/about.sass */
+.about {
+  padding: 15px 5px 10px 5px;
+}
+
+/* line 4, ../../src/stylesheets/about.sass */
+.about > p {
+  text-indent: 35px;
+}

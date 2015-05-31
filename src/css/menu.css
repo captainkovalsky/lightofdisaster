@@ -1,0 +1,69 @@
+/* line 3, ../../src/stylesheets/menu.sass */
+div.menu {
+  display: table;
+  font-family: "RusWolfenstein Regular";
+  margin-top: 35px;
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 3, ../../src/stylesheets/menu.sass */
+  div.menu {
+    margin-top: 5px;
+  }
+}
+
+/* line 10, ../../src/stylesheets/menu.sass */
+div.menu-container {
+  display: table-row;
+}
+
+/* line 13, ../../src/stylesheets/menu.sass */
+div.menu-container > span {
+  display: table-cell;
+  padding: 0 15px 0 15px;
+  line-height: 28pt;
+  font-size: 28pt;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 13, ../../src/stylesheets/menu.sass */
+  div.menu-container > span {
+    padding: 3px 0;
+    display: block;
+    font-size: 20pt;
+  }
+}
+/* line 27, ../../src/stylesheets/menu.sass */
+div.menu-container > span:after {
+  content: "";
+  vertical-align: baseline;
+  position: absolute;
+  right: -1px;
+  display: block;
+  width: 3px;
+  height: 69%;
+  top: 21%;
+  border-radius: 10px 10px 10px 10px;
+  background: #97a9b2;
+}
+@media only screen and (min-width: 201px) and (max-width: 767px) {
+  /* line 27, ../../src/stylesheets/menu.sass */
+  div.menu-container > span:after {
+    display: none;
+  }
+}
+/* line 42, ../../src/stylesheets/menu.sass */
+div.menu-container > span.last:after {
+  display: none;
+}
+/* line 45, ../../src/stylesheets/menu.sass */
+div.menu-container > span a {
+  text-decoration: none;
+  color: #97a9b2;
+}
+/* line 48, ../../src/stylesheets/menu.sass */
+div.menu-container > span a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}

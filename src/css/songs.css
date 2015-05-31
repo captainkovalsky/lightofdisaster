@@ -1,0 +1,54 @@
+/* line 3, ../../src/stylesheets/songs.sass */
+div.song {
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+}
+@media only screen and (min-width: 1459px) {
+  /* line 3, ../../src/stylesheets/songs.sass */
+  div.song {
+    left: 40%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1458px) {
+  /* line 3, ../../src/stylesheets/songs.sass */
+  div.song {
+    left: 40%;
+  }
+}
+/* line 14, ../../src/stylesheets/songs.sass */
+div.song .title, div.song .ep-title {
+  text-align: center;
+}
+/* line 17, ../../src/stylesheets/songs.sass */
+div.song .title {
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+/* line 22, ../../src/stylesheets/songs.sass */
+div.song > p.part {
+  letter-spacing: 1px;
+  padding-top: 15px;
+  line-height: 22px;
+}
+
+/* line 27, ../../src/stylesheets/songs.sass */
+div.song-menu-items {
+  margin-left: 25px;
+}
+
+/* line 30, ../../src/stylesheets/songs.sass */
+p.ep-title {
+  font-size: 18px;
+}
+
+/* line 33, ../../src/stylesheets/songs.sass */
+div.song-menu {
+  margin-top: 20px;
+  position: fixed;
+}
+/* line 36, ../../src/stylesheets/songs.sass */
+div.song-menu a {
+  text-decoration: none;
+}
