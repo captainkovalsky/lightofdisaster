@@ -14,5 +14,10 @@ app.set( 'basePath', __dirname );
 
 app.use( bodyParser() );
 routes( app );
-app.listen( 80 );
+app.listen( 80, function () {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Light of Disaster app listening at http://%s:%s', host, port);
+} );
 
