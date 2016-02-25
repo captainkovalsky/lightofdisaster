@@ -14,7 +14,7 @@ app.set( 'basePath', __dirname );
 
 app.use( bodyParser() );
 routes( app );
-app.listen( 80, function () {
-  console.log('Light of Disaster app listening at 80 port');
+app.listen( 3001, function () {
+  console.log('Light of Disaster app listening at 3001 port');
 } );
 
